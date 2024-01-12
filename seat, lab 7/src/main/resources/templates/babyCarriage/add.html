@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Baby Carriage</title>
+    <style>
+        form {
+            width: 50%;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            padding: 8px;
+            background-color: #4CAF50;
+            color: white;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Add Baby Carriage</h2>
+
+<form action="/babyCarriage/add" method="post">
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand" name="brand">
+
+    <label for="model">Model:</label>
+    <input type="text" id="model" name="model">
+
+    <label for="color">Color:</label>
+    <input type="text" id="color" name="color">
+
+    <label for="carriageType">Carriage Type:</label>
+    <input type="text" id="carriageType" name="carriageType">
+
+    <input type="submit" value="Add">
+    <a th:href="@{/babyCarriage/list}">&lt;Back</a>
+</form>
+
+</body>
+</html>

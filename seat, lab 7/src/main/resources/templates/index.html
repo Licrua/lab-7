@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Baby Carriages and Car Seats</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            padding: 8px;
+            background-color: #4CAF50;
+            color: white;
+            width: 100px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<h2>Display a list of Baby Carriage and Car Seats</h2>
+
+<a th:href="@{/babyCarriage/list}">List Baby Carriages</a>
+<a th:href="@{/carSeat/list}">List Car Seats</a>
+
+</body>
+</html>

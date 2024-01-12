@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Baby Carriages</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            padding: 8px;
+            background-color: #4CAF50;
+            color: white;
+            width: 100px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<h2>List of Baby Carriages</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Carriage Type</th>
+    </tr>
+    <tr th:each="carriage : ${carriages}">
+        <td th:text="${carriage.id}"></td>
+        <td th:text="${carriage.brand}"></td>
+        <td th:text="${carriage.model}"></td>
+        <td th:text="${carriage.color}"></td>
+        <td th:text="${carriage.carriageType}"></td>
+    </tr>
+</table>
+
+<a th:href="@{/babyCarriage/add}">Add</a>
+<a th:href="@{/}">&lt;Back</a>
+</body>
+</html>
